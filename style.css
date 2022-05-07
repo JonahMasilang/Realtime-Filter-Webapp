@@ -16,3 +16,7 @@ canvas {
     from{box-shadow: 1px 1px 38px black;}
     to{box-shadow: 1px 1px 38px blanchedalmond;}
 }
+
+body {
+    background-color: brown;
+}
