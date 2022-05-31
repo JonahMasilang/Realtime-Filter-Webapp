@@ -17,13 +17,13 @@ function setup() {
 }
 
 function modelLoaded() {
-    console.log('PoseNet is initialized.')
+    console.log('PoseNet is initialized.');
 }
 
 function draw() {
     image(video, 0, 0, 300, 300);
 
-    image(mustache, nose_x, nose_y, 30, 30);
+    image(mustache, nose_x, nose_y, 80, 35);
 }
 
 function take_snapshot() {
@@ -33,7 +33,7 @@ function take_snapshot() {
 function gotPoses(results) {
     if(results.length > 0) {
         console.log(results);
-        nose_x = results[0].pose.nose.x;
+        nose_x = results[0].pose.nose.x - 40;
         console.log("nose x = " + nose_x);
         nose_y = results[0].pose.nose.y;
         console.log("nose y = " + nose_y);
